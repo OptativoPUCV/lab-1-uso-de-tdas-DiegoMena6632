@@ -80,3 +80,19 @@ exercises.c:10:7: note: previous definition of 'crea_lista' was here
 cc1.exe: all warnings being treated as errors
 Compilation failed
 0778f39
+Fri, Mar 21, 2025 11:50:34 AM: 
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:18:10: error: implicit declaration of function 'push_back' [-Werror=implicit-function-declaration]
+          push_back(listaTemp, elemento);
+          ^~~~~~~~~
+exercises.c: At top level:
+exercises.c:57:7: error: redefinition of 'crea_lista'
+ List* crea_lista() {
+       ^~~~~~~~~~
+exercises.c:10:7: note: previous definition of 'crea_lista' was here
+ List* crea_lista()
+       ^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2f4cf93
