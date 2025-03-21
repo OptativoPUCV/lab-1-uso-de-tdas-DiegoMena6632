@@ -5,8 +5,21 @@
 #include <ctype.h>
 #include "arraylist.h"
 #include "stack.h"
-
 //#include "exercises.h"
+
+List* crea_lista()
+{
+    List* listaTemp = create_list();
+    int* elemento;
+    for(size_t k = 1; k <= 10; k++)
+    {
+         elemento = (int*)malloc(sizeof(int));
+         *elemento = k;
+         push_back(listaTemp, elemento);
+    }
+
+    return listaTemp;
+}
 
 //Funciones auxiliares que puedes utilizar para debuggear tus ejercicios
 //NO MODIFICAR
