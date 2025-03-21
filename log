@@ -125,3 +125,19 @@ exercises.c:51:10: error: implicit declaration of function 'push_back' [-Werror=
 cc1.exe: all warnings being treated as errors
 Compilation failed
 9d061e9
+Fri, Mar 21, 2025 11:52:27 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:51:19: error: passing argument 1 of 'pushBack' from incompatible pointer type [-Werror=incompatible-pointer-types]
+          pushBack(&L, elemento);
+                   ^
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:20:6: note: expected 'List * {aka struct List *}' but argument is of type 'List ** {aka struct List **}'
+ void pushBack(List *L, void *dato);
+      ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+68a1b13
