@@ -194,3 +194,17 @@ exercises.c:144:10: note: ...this statement, but the latter is misleadingly inde
 cc1.exe: all warnings being treated as errors
 Compilation failed
 cbd21da
+Sat, Mar 22, 2025  6:22:39 PM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:143:10: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+          if(top(Pila) == NULL);
+          ^~
+exercises.c:144:10: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+          {
+          ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+2818f9a
