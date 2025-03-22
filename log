@@ -171,3 +171,26 @@ Sat, Mar 22, 2025  3:44:11 PM:
  tests:  4|1
 total_score: 50/70
 c920997
+Sat, Mar 22, 2025  6:19:23 PM: 
+ exercises.c | 18 +++++++++++++++++-
+ 1 file changed, 17 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:139:21: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+          push(Pila, '(');
+                     ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'int'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:143:10: error: this 'if' clause does not guard... [-Werror=misleading-indentation]
+          if(top(Pila) == NULL);
+          ^~
+exercises.c:144:10: note: ...this statement, but the latter is misleadingly indented as if it is guarded by the 'if'
+          {
+          ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+cbd21da
